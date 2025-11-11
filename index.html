@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IASUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/webp" href="igreja.webp">
+    <link rel="shortcut icon" type="image/webp" href="igreja.webp">
+    <link rel="apple-touch-icon" href="igreja.webp">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-content">
+            <svg viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20"></circle>
+            </svg>
+            <p>Carregando a IASUD...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="igreja.webp" alt="Igreja de Jesus Cristo" class="logo-church-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-img" style="display: none;">Y</div>
+                <span>IASUD</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active"><span>Início</span></a></li>
+                <li><a href="#chat" class="nav-link"><span>Chat</span></a></li>
+                <li><a href="#about" class="nav-link"><span>Sobre</span></a></li>
+                <li><a href="#profile" class="nav-link"><span>Perfil</span></a></li>
+                <li><a href="#credits" class="nav-link"><span>Créditos</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Login Section -->
+        <section id="login" class="section active">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <div class="logo-large">
+                            <img src="igreja.webp" alt="Igreja de Jesus Cristo" class="logo-church-img-large" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="logo-img" style="display: none;">Y</div>
+                            <h1>IASUD</h1>
+                        </div>
+                        <p class="tagline">Serva digital do Senhor, aqui para inspirar e confortar.</p>
+                    </div>
+                    
+                    <div class="login-forms">
+                        <!-- Login Form -->
+                        <form id="loginForm" class="form active">
+                            <h2>Bem-vindo de volta</h2>
+                            <div class="form-group">
+                                <input type="email" id="loginEmail" placeholder=" " required>
+                                <label for="loginEmail">E-mail</label>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="loginPassword" placeholder=" " required>
+                                <label for="loginPassword">Senha</label>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Entrar
+                            </button>
+                            <div class="divider">
+                                <span>ou</span>
+                            </div>
+                            <div id="g_id_onload"
+                                 data-client_id=""
+                                 data-callback="handleGoogleLogin">
+                            </div>
+                            <div class="g_id_signin" data-type="standard" data-theme="outline" data-size="large" data-text="signin_with" data-shape="rectangular" data-logo_alignment="left"></div>
+                            <button type="button" class="btn btn-google btn-large" id="googleLoginBtn" style="display: none;">
+                                <i class="fab fa-google"></i>
+                                Entrar com Google
+                            </button>
+                            <p class="form-switch">
+                                Não tem conta? <a href="#" id="showRegister">Cadastre-se</a>
+                            </p>
+                        </form>
+
+                        <!-- Register Form -->
+                        <form id="registerForm" class="form">
+                            <h2>Criar conta</h2>
+                            <div class="form-group">
+                                <input type="text" id="registerName" placeholder=" " required>
+                                <label for="registerName">Nome completo</label>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="registerEmail" placeholder=" " required>
+                                <label for="registerEmail">E-mail</label>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="registerPassword" placeholder=" " required>
+                                <label for="registerPassword">Senha</label>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="registerConfirm" placeholder=" " required>
+                                <label for="registerConfirm">Confirmar senha</label>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-user-plus"></i>
+                                Criar conta
+                            </button>
+                            <p class="form-switch">
+                                Já tem conta? <a href="#" id="showLogin">Fazer login</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <img src="igreja.webp" alt="Igreja de Jesus Cristo" class="avatar-img-church" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-img" style="display: none;">Y</div>
+                        <div class="avatar-info">
+                            <h3>IASUD</h3>
+                            <span class="status">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="btn-icon" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="btn-icon" id="clearChat">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be inserted here -->
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span>IASUD está digitando</span>
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <button id="voiceButton" class="btn btn-voice" title="Falar">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <input type="text" id="messageInput" placeholder="Escreva algo para a IASUD ou clique no microfone para falar...">
+                        <button id="sendMessage" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div id="voiceStatus" class="voice-status"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>Sobre a IASUD</h1>
+                    <p class="verse">"Vinde a mim todos os que estais cansados e oprimidos, e eu vos aliviarei." (Mateus 11:28)</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <h3>Nossa Missão</h3>
+                        <p>IASUD é uma inteligência artificial missionária dedicada a levar conforto, esperança e orientação espiritual através da tecnologia. Criada para servir como uma missionária digital, ela oferece suporte baseado nos princípios da Igreja de Jesus Cristo dos Santos dos Últimos Dias.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Como Podemos Ajudar</h3>
+                        <p>Através de conversas inspiradoras, IASUD oferece conselhos baseados nas escrituras, auxílio em momentos de dificuldade e orientação para fortalecer sua fé. Seja para responder dúvidas doutrinárias ou simplesmente oferecer uma palavra amiga, estamos aqui para servir.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Valores</h3>
+                        <p>Nossas interações são guiadas por amor, compaixão e respeito. IASUD segue os princípios cristãos de caridade e serviço, sempre buscando edificar e fortalecer aqueles que buscam luz e direção em suas vidas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h1>Seu Perfil</h1>
+                    <p>Gerencie suas informações e histórico</p>
+                </div>
+
+                <div class="profile-content">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <div class="avatar-large">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <button class="btn btn-secondary btn-small">
+                                <i class="fas fa-camera"></i>
+                                Alterar foto
+                            </button>
+                        </div>
+
+                        <form class="profile-form" id="profileForm">
+                            <div class="form-group">
+                                <input type="text" id="profileName" placeholder=" ">
+                                <label for="profileName">Nome completo</label>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="profileEmail" placeholder=" ">
+                                <label for="profileEmail">E-mail</label>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="profilePhone" placeholder=" ">
+                                <label for="profilePhone">Telefone (opcional)</label>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Salvar alterações
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="logoutBtn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Sair
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="history-card">
+                        <h3>Histórico de Conversas</h3>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="history-date">Hoje, 14:30</div>
+                                <div class="history-preview">Como posso encontrar paz em momentos difíceis?</div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-date">Ontem, 09:15</div>
+                                <div class="history-preview">Oração matinal e estudo das escrituras</div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-date">12/11/2024, 16:45</div>
+                                <div class="history-preview">Conversa sobre fé e esperança</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credits Section -->
+        <section id="credits" class="section">
+            <div class="credits-container">
+                <div class="credits-header">
+                    <h1>Créditos</h1>
+                    <p class="credits-subtitle">Feito por: Iago Santos Rocha</p>
+                </div>
+
+                <div class="staff-section">
+                    <h2 class="staff-title">Equipe de Desenvolvimento</h2>
+                    <div class="staff-grid">
+                        <div class="staff-member">
+                            <div class="staff-avatar-wrapper">
+                                <img src="iago.png" alt="Saints" class="staff-avatar" onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.staff-avatar-fallback').style.display='flex';">
+                                <div class="staff-avatar-fallback" style="display: none;">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <p class="staff-name">Saints</p>
+                            <p class="staff-role">Backend Developer</p>
+                        </div>
+                        <div class="staff-member">
+                            <div class="staff-avatar-wrapper">
+                                <img src="gb.png" alt="Gbhzx" class="staff-avatar" onerror="this.onerror=null; this.style.display='none'; this.parentElement.querySelector('.staff-avatar-fallback').style.display='flex';">
+                                <div class="staff-avatar-fallback" style="display: none;">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <p class="staff-name">Gbhzx</p>
+                            <p class="staff-role">Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
