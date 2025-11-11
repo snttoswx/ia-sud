@@ -1,0 +1,45 @@
+================================================================================
+⚠️ IMPORTANTE: NETLIFY NÃO EXECUTA PYTHON/FLASK
+================================================================================
+
+Os erros que você está vendo acontecem porque a Netlify é uma plataforma
+ESTÁTICA que não executa servidores Python.
+
+SOLUÇÃO RÁPIDA:
+===============
+
+1. HOSPEDE O BACKEND (app.py) NO RENDER.COM (GRATUITO):
+   - Acesse: https://render.com
+   - Crie um "Web Service"
+   - Faça upload do app.py e requirements.txt
+   - Render dará uma URL: https://iasud-backend.onrender.com
+
+2. ATUALIZE O script.js:
+   - Abra script.js
+   - Na linha 2, mude para:
+     const API_BASE_URL = 'https://iasud-backend.onrender.com';
+   (Substitua pela URL que o Render fornecer)
+
+3. FAÇA UPLOAD NA NETLIFY APENAS DOS ARQUIVOS ESTÁTICOS:
+   - index.html
+   - script.js (já atualizado)
+   - style.css
+   - igreja.webp
+   - iago.png
+   - gb.png
+   - netlify.toml
+
+4. CONFIGURE AS VARIÁVEIS DE AMBIENTE NO RENDER:
+   - GEMINI_API_KEY (ou GEMINI_API_KEYS)
+   - GOOGLE_CLIENT_ID
+   - GOOGLE_CLIENT_SECRET
+   - SECRET_KEY
+   - JWT_SECRET
+
+5. ATUALIZE O GOOGLE OAUTH:
+   - No Google Cloud Console, adicione a URL do Render nas configurações
+
+VEJA O ARQUIVO "SOLUCAO_NETLIFY.md" PARA INSTRUÇÕES DETALHADAS!
+
+================================================================================
+
